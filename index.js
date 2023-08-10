@@ -26,14 +26,6 @@ const q5 = document.getElementById("q5");
 const tnc = document.getElementById("tnc");
 const submit = document.getElementById("submit");
 
-onValue(coreapplicationdb, function(snapshot) {
-    if(snapshot.exists()) {
-        let items = Object.entries(snapshot.val());
-        console.log(items)
-        console.log(items.length)
-    } 
-});
-
 submit.addEventListener("click", function(e) {
     e.preventDefault();
     if(notempty(name.value) && notempty(email.value) && notempty(usn.value) && notempty(phone.value) && notempty(q1.value) && notempty(q2.value) && notempty(q3.value) && notempty(q4.value) && notempty(q5.value) && checked()) {
